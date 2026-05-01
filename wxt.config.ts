@@ -5,6 +5,7 @@ export default defineConfig({
   srcDir: 'src',
   modules: ['@wxt-dev/module-svelte'],
   manifest: {
+    name: 'eMAG Promoted Remover',
     permissions: ['storage'],
   },
 });

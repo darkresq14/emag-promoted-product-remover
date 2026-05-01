@@ -65,15 +65,9 @@
       </svg>
 
       <div class="header-text">
-        <span class="header-title">eMAG Ad Remover</span>
-        <span class="header-subtitle">Promoted threat neutralized</span>
+        <span class="header-title">eMAG Promoted Remover</span>
       </div>
     </div>
-  </div>
-
-  <div class="status-bar">
-    <div class="status-dot"></div>
-    <span class="status-text">Protection active</span>
   </div>
 
   <div class="stats">
