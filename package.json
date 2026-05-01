@@ -2,7 +2,7 @@
   "name": "emag-promoted-product-remover",
   "description": "Removes promoted/sponsored product cards from emag.ro, emag.bg, and emag.hu",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "wxt",

@@ -1,3 +1,7 @@
+<script lang="ts" module>
+  declare const __APP_VERSION__: string;
+</script>
+
 <script lang="ts">
   import { totalRemoved } from '@/lib/storage';
 
@@ -98,6 +102,6 @@
 
   <div class="footer">
     <span class="footer-label">Ad blocker protocol</span>
-    <span class="footer-version">v0.1.0</span>
+    <span class="footer-version">v${__APP_VERSION__}</span>
   </div>
 </div>
