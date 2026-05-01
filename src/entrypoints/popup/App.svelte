@@ -45,28 +45,7 @@
     <div class="corner-br"></div>
 
     <div class="header-top">
-      <svg class="shield-icon" viewBox="0 0 40 48" fill="none">
-        <path
-          d="M20 2L4 10v14c0 11.1 6.8 21.5 16 24 9.2-2.5 16-12.9 16-24V10L20 2z"
-          stroke="#00f0ff"
-          stroke-width="2"
-          fill="rgba(0,240,255,0.05)"
-        />
-        <path
-          d="M14 24l4 4 8-8"
-          stroke="#00f0ff"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M20 2L4 10v14c0 11.1 6.8 21.5 16 24"
-          stroke="#00f0ff"
-          stroke-width="0.5"
-          fill="none"
-          opacity="0.2"
-        />
-      </svg>
+      <img class="shield-icon" src="/icon/shield.svg" alt="shield" />
 
       <div class="header-text">
         <span class="header-title">eMAG Promoted Remover</span>
