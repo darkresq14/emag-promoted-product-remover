@@ -3,24 +3,28 @@ export default defineContentScript({
   runAt: 'document_idle',
 
   main() {
-    const PROMOTED_SELECTOR =
-      '.card-item:has(.card-v2-badge-cmp:not([class*="cmp-badge-"]))';
-
     let pageCount = 0;
 
     function removePromotedCards(): number {
-      const cards = document.querySelectorAll(PROMOTED_SELECTOR);
+      const cards = document.querySelectorAll('.card-item[data-url]');
       if (cards.length === 0) return 0;
 
-      cards.forEach((card) => card.remove());
-      pageCount += cards.length;
+      const promotedCards = Array.from(cards).filter((card) => {
+        const url = card.getAttribute('data-url') || '';
+        return url.includes('sponsored_products') || url.includes('recads');
+      });
+
+      if (promotedCards.length === 0) return 0;
+
+      promotedCards.forEach((card) => card.remove());
+      pageCount += promotedCards.length;
 
       browser.runtime.sendMessage({
         type: 'EPPR_PROMOTED_REMOVED',
-        count: cards.length,
+        count: promotedCards.length,
       });
 
-      return cards.length;
+      return promotedCards.length;
     }
 
     removePromotedCards();
